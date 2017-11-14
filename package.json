@@ -1,0 +1,22 @@
+{
+  "name": "songwhip-slack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon --exec \"npm start\"",
+    "deploy": "now -e NODE_ENV=production"
+  },
+  "dependencies": {
+    "babel-eslint": "^7.2.3",
+    "body-parser": "^1.18.2",
+    "debug": "^3.0.0",
+    "dotenv": "^4.0.0",
+    "eslint": "^4.4.1",
+    "express": "^4.15.4",
+    "node-fetch": "^1.7.2",
+    "nodemon": "^1.11.0",
+    "redis": "^2.8.0"
+  }
+}
