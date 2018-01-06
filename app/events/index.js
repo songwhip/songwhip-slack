@@ -25,6 +25,13 @@ exports.link_shared = async (teamId, { channel, links }) => {
     return
   }
 
+  // when there is only one link there's no value in
+  // us posting the songwhip link to the channel
+  if (Object.keys(json.links).length < 2) {
+    debug('abort: only one result')
+    return
+  }
+
   const text = `${ json.url }?utm_source=slack-app`
 
   await api('chat.postMessage', {
