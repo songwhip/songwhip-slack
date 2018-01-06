@@ -25,7 +25,7 @@ exports.link_shared = async (teamId, { channel, links }) => {
     return
   }
 
-  const text = `${ json.url }?utm_source=slack&utm_medium=slack-app&utm_campaign=auto-convert-link`
+  const text = `${ json.url }?utm_source=slack-app`
 
   await api('chat.postMessage', {
     channel,
